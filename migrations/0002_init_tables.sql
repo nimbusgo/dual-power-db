@@ -2,6 +2,9 @@ CREATE SCHEMA app_public;
 CREATE SCHEMA app_private;
 CREATE SCHEMA app_hidden;
 
+DROP ROLE IF EXISTS dual_power_anonymous;
+DROP ROLE IF EXISTS dual_power_user;
+
 CREATE ROLE dual_power_anonymous;
 CREATE ROLE dual_power_user;
 

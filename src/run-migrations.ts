@@ -18,7 +18,8 @@ async function run() {
         port: 5432,
         ensureDatabaseExists: true
     }
-    if (dbName == "dual-power") {
+    if (true) {
+        // if (dbName == "dual-power") {
         await migrate(dbConfig, "./migrations")
     } else {
         const clientConfig = {
