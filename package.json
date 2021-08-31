@@ -23,6 +23,7 @@
     "express": "^4.17.1",
     "jwt-decode": "^3.1.2",
     "postgraphile": "^4.11.0",
+    "postgres": "^1.0.2",
     "postgres-migrations": "^5.1.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.3.5"
