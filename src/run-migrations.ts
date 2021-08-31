@@ -17,24 +17,25 @@ async function run() {
         port: 5432,
         ensureDatabaseExists: true
     }
-    if (dbName == "dual-power"){
+    if (dbName == "dual-power") {
         await migrate(dbConfig, "./migrations")
     } else {
         const clientConfig = {
             database: dbName,
-            user: process.env.DATABASE_USER ,
+            user: process.env.DATABASE_USER,
             password: process.env.DATABASE_PASS,
             host: process.env.DATABASE_HOST,
             port: 5432,
             ssl: true
-          }
-      const client = new pg.Client(clientConfig) // or a Pool, or a PoolClient
-      await client.connect()
-      try {
-        await migrate({client}, "migrations")
-      } finally {
-        await client.end()
-      }
+        }
+        console.log("attempting migration with config ", clientConfig)
+        const client = new pg.Client(clientConfig) // or a Pool, or a PoolClient
+        await client.connect()
+        try {
+            await migrate({ client }, "migrations")
+        } finally {
+            await client.end()
+        }
     }
 
 }
