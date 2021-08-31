@@ -6,7 +6,8 @@
   "scripts": {
     "migrate": "npx ts-node src/run-migrations.ts",
     "start": "npx ts-node src/run-migrations.ts && npx ts-node src/server.ts",
-    "postinstall": "tsc"
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
