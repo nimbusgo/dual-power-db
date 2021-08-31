@@ -2,8 +2,8 @@ CREATE SCHEMA app_public;
 CREATE SCHEMA app_private;
 CREATE SCHEMA app_hidden;
 
-CREATE ROLE IF NOT EXISTS dual_power_anonymous;
-CREATE ROLE IF NOT EXISTS dual_power_user;
+CREATE ROLE dual_power_anonymous;
+CREATE ROLE dual_power_user;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
