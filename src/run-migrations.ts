@@ -2,7 +2,8 @@ const dotenv = require('dotenv');
 dotenv.config()
 
 import { migrate, MigrateDBConfig } from "postgres-migrations";
-const pg = require('postgres')
+import { Client } from 'pg';
+// const pg = require('postgres')
 
 async function run() {
 
@@ -29,7 +30,7 @@ async function run() {
             ssl: true
         }
         console.log("attempting migration with config ", clientConfig)
-        const client = new pg.Client(clientConfig) // or a Pool, or a PoolClient
+        const client = new Client(clientConfig) // or a Pool, or a PoolClient
         await client.connect()
         try {
             await migrate({ client }, "migrations")
