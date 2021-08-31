@@ -27,7 +27,7 @@ async function run() {
             password: process.env.DATABASE_PASS,
             host: process.env.DATABASE_HOST,
             port: 5432,
-            ssl: true
+            ssl: { rejectUnauthorized: false }
         }
         console.log("attempting migration with config ", clientConfig)
         const client = new Client(clientConfig) // or a Pool, or a PoolClient
