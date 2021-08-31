@@ -17,4 +17,6 @@ app.use(
   )
 );
 
-app.listen(process.env.PORT || 5000);
+const port = process.env.PORT || 5000
+console.log("starting postgraphile on port ", port)
+app.listen(port);

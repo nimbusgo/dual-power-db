@@ -33,6 +33,7 @@ async function run() {
         await client.connect()
         try {
             await migrate({ client }, "migrations")
+            console.log("finished migrations")
         } finally {
             await client.end()
         }
