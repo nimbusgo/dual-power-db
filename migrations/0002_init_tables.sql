@@ -161,5 +161,16 @@ GRANT USAGE ON SCHEMA app_hidden TO dual_power_anonymous, dual_power_user;
 
 GRANT ALL ON SCHEMA app_public TO dual_power_anonymous, dual_power_user; 
 
--- GRANT ALL ON app_public.circles TO dual_power_anonymous;
--- GRANT ALL ON app_public.circles TO dual_power_user;
+GRANT ALL ON app_public.circle_members TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.circles TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.comments TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.documents TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.events TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.locations TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.posts TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.proposals TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.revisions TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.user_profiles TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.users TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.users_private TO dual_power_anonymous, dual_power_user;
+GRANT ALL ON app_public.votes TO dual_power_anonymous, dual_power_user;
